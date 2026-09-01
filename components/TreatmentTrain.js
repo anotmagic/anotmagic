@@ -16,20 +16,38 @@ export default function TreatmentTrain() {
 
   return (
     <>
-      <div className="train">
+      {/* Train row */}
+      <div className="flex gap-2.5 items-end overflow-x-auto pb-1.5">
         {STAGES.map(([label, marked, out], i) => (
           <button
             key={label}
-            className={'stage' + (marked ? ' mk' : '')}
+            className={`
+              flex-1 min-w-[104px] bg-[#17323c] text-[#a9c6c8] font-mono text-[11px] tracking-[0.06em] 
+              py-4 px-2 border-0 cursor-pointer relative text-center 
+              hover:bg-[#1e4250] hover:text-white
+              ${marked ? 'text-white shadow-[inset_0_3px_0_#2fa9a6]' : ''}
+              ${active === i ? 'bg-[#1e4250] text-white' : ''}
+            `}
             aria-pressed={active === i}
             onClick={() => setActive(i)}
           >
-            {marked && <span className="tag">{i === 2 ? 'A' : 'B'}</span>}
+            {marked && (
+              <span className="absolute -top-[11px] left-1/2 -translate-x-1/2 w-[22px] h-[22px] rounded-full bg-[#2fa9a6] text-[#10262e] font-bold text-[11px] leading-[22px] text-center">
+                {i === 2 ? 'A' : 'B'}
+              </span>
+            )}
             {label}
           </button>
         ))}
       </div>
-      <div className={'trainout' + (active !== null && !STAGES[active][1] ? ' neg' : '')}>
+
+      {/* Description line */}
+      <div
+        className={`
+          min-h-[44px] text-[14px] text-[#a9c6c8] border-t border-[#2a4a57] pt-3 mt-1
+          ${active !== null && !STAGES[active][1] ? 'text-[#e8b87a]' : ''}
+        `}
+      >
         {active === null
           ? 'Select a stage to see what typically constrains it — and whether oxidation has a role there.'
           : STAGES[active][2]}

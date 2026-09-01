@@ -1,47 +1,67 @@
+import Link from 'next/link';
+
 export default function Footer() {
   return (
-    <footer>
-      <div className="wrap">
-        <div className="grid g4">
+    <footer className="bg-[#10262e] text-[#a9c6c8] py-12 mt-0">
+      <div className="max-w-[1200px] mx-auto px-6">
+        {/* Four‑column grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {/* Navigate */}
           <div>
-            <h4>Navigate</h4>
-            <ul>
-              <li>The Water Problem</li>
-              <li>Solutions</li>
-              <li>Technology</li>
-              <li>Industries</li>
-              <li>Evidence</li>
-              <li>Insights</li>
+            <h4 className="font-mono text-[10.5px] tracking-[0.11em] uppercase text-[#2fa9a6] font-normal mb-3">
+              Navigate
+            </h4>
+            <ul className="list-none text-[14px] space-y-1.5">
+              <li className="py-0.5">The Water Problem</li>
+              <li className="py-0.5">Solutions</li>
+              <li className="py-0.5">Technology</li>
+              <li className="py-0.5">Industries</li>
+              <li className="py-0.5">Evidence</li>
+              <li className="py-0.5">Insights</li>
             </ul>
           </div>
+
+          {/* Technology */}
           <div>
-            <h4>Technology</h4>
-            <ul>
-              <li>ANOT®</li>
-              <li>NOXXALL®</li>
-              <li>Sugofil®</li>
-              <li>S Astra™</li>
-              <li>Where our process ends</li>
+            <h4 className="font-mono text-[10.5px] tracking-[0.11em] uppercase text-[#2fa9a6] font-normal mb-3">
+              Technology
+            </h4>
+            <ul className="list-none text-[14px] space-y-1.5">
+              <li className="py-0.5">ANOT®</li>
+              <li className="py-0.5">NOXXALL®</li>
+              <li className="py-0.5">Sugofil®</li>
+              <li className="py-0.5">S Astra™</li>
+              <li className="py-0.5">Where our process ends</li>
             </ul>
           </div>
+
+          {/* Resources */}
           <div>
-            <h4>Resources</h4>
-            <ul>
-              <li>Client white paper</li>
-              <li>Water Economics Assessment</li>
-              <li>Technical boundaries</li>
+            <h4 className="font-mono text-[10.5px] tracking-[0.11em] uppercase text-[#2fa9a6] font-normal mb-3">
+              Resources
+            </h4>
+            <ul className="list-none text-[14px] space-y-1.5">
+              <li className="py-0.5">Client white paper</li>
+              <li className="py-0.5">Water Economics Assessment</li>
+              <li className="py-0.5">Technical boundaries</li>
             </ul>
           </div>
+
+          {/* Contact */}
           <div>
-            <h4>Contact</h4>
-            <ul>
-              <li className="ph">[ EMAIL ]</li>
-              <li className="ph">[ PHONE ]</li>
-              <li className="ph">[ ADDRESS ]</li>
+            <h4 className="font-mono text-[10.5px] tracking-[0.11em] uppercase text-[#2fa9a6] font-normal mb-3">
+              Contact
+            </h4>
+            <ul className="list-none text-[14px] space-y-1.5">
+              <li className="py-0.5 font-mono text-[#2fa9a6] text-[13px]">[ EMAIL ]</li>
+              <li className="py-0.5 font-mono text-[#2fa9a6] text-[13px]">[ PHONE ]</li>
+              <li className="py-0.5 font-mono text-[#2fa9a6] text-[13px]">[ ADDRESS ]</li>
             </ul>
           </div>
         </div>
-        <div className="evnote">
+
+        {/* Legal & disclaimer */}
+        <div className="border-t border-[#2a4a57] mt-[30px] pt-[18px] text-[12.5px] text-[#7e9aa3]">
           This site contains no M Sciences performance statistics. Application-specific claims are
           released only within the supporting evidence boundary. Treated water is not for drinking
           purposes. ANOT®, NOXXALL® and Sugofil® are registered marks; S Astra™ is a trademark of M

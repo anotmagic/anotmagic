@@ -1,3 +1,4 @@
+//app/layout.js
 import './globals.css';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
@@ -11,6 +12,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+<link href="https://fonts.googleapis.com/css2?family=Caladea:wght@400;700&family=Carlito&family=IBM+Plex+Mono&display=swap" rel="stylesheet" />
+
+      </head>
       <body>
         <Nav />
         <main className="view-enter">{children}</main>
