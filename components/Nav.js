@@ -32,12 +32,7 @@ export default function Nav() {
 
   return (
     <>
-      <div className="proto">
-        <span>
-          <b>Prototype</b> — visual direction &amp; navigation flow, not the finished site
-        </span>
-        <span>Click the navigation and the interactive elements</span>
-      </div>
+
 
       <header>
         <div className="wrap hbar">
