@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ReadAlongside from '../../components/ReadAlongside';
 
 export const metadata = { title: 'Technology · M Sciences' };
 
@@ -128,6 +129,10 @@ export default function TechnologyPage() {
               Both evaluations were conducted under the company&rsquo;s former name, Ozo Nano
               Sciences.
             </p>
+            <ReadAlongside
+  slug="portfolio-capability-profile"
+  note="Full technology portfolio, services and deployment experience in one page."
+/>
           </div>
         </div>
       </section>

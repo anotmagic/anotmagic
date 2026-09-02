@@ -12,12 +12,12 @@ export default function Footer() {
               Navigate
             </h4>
             <ul className="list-none text-[14px] space-y-1.5">
-              <li className="py-0.5">The Water Problem</li>
-              <li className="py-0.5">Solutions</li>
-              <li className="py-0.5">Technology</li>
-              <li className="py-0.5">Industries</li>
-              <li className="py-0.5">Evidence</li>
-              <li className="py-0.5">Insights</li>
+              <li className="py-0.5"><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+              <li className="py-0.5"><Link href="/technology" className="hover:text-white transition-colors">Technology</Link></li>
+              <li className="py-0.5"><Link href="/industries" className="hover:text-white transition-colors">Industries</Link></li>
+              <li className="py-0.5"><Link href="/evidence" className="hover:text-white transition-colors">Evidence</Link></li>
+              <li className="py-0.5"><Link href="/resources" className="hover:text-white transition-colors">Resources</Link></li>
+              <li className="py-0.5"><Link href="/tool" className="hover:text-white transition-colors">Is this for you?</Link></li>
             </ul>
           </div>
 
@@ -35,15 +35,32 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Resources – now linking to actual PDFs */}
           <div>
             <h4 className="font-mono text-[10.5px] tracking-[0.11em] uppercase text-[#2fa9a6] font-normal mb-3">
               Resources
             </h4>
             <ul className="list-none text-[14px] space-y-1.5">
-              <li className="py-0.5">Client white paper</li>
-              <li className="py-0.5">Water Economics Assessment</li>
-              <li className="py-0.5">Technical boundaries</li>
+              <li className="py-0.5">
+                <Link href="/resources/white-paper" className="hover:text-white transition-colors">
+                  Client white paper
+                </Link>
+              </li>
+              <li className="py-0.5">
+                <Link href="/resources/executive-brief" className="hover:text-white transition-colors">
+                  Executive brief
+                </Link>
+              </li>
+              <li className="py-0.5">
+                <Link href="/resources/portfolio-capability-profile" className="hover:text-white transition-colors">
+                  Portfolio &amp; capability profile
+                </Link>
+              </li>
+              <li className="py-0.5">
+                <Link href="/resources" className="hover:text-white transition-colors">
+                  All resources →
+                </Link>
+              </li>
             </ul>
           </div>
 

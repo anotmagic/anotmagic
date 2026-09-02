@@ -1,4 +1,5 @@
 import ContactForm from '../../components/ContactForm';
+import ReadAlongside from '../../components/ReadAlongside';
 
 export const metadata = { title: 'Start a conversation · M Sciences' };
 
@@ -36,6 +37,13 @@ export default function ContactPage() {
                 reuse endpoint
               </p>
             </div>
+
+            {/* ReadAlongside callout */}
+            <ReadAlongside
+              slug="executive-brief"
+              note="The one-page version of everything on this site — good to send ahead of a call."
+            />
+
             <div className="bg-[#10262e] text-white p-6 mt-3.5">
               <div className="text-[#2fa9a6] font-mono text-[11.5px] tracking-[0.14em] uppercase mb-2.5">
                 Contact

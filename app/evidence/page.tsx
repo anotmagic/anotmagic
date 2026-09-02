@@ -1,4 +1,6 @@
 import EvidenceLadder from '../../components/EvidenceLadder';
+import ReadAlongside from '../../components/ReadAlongside';
+
 
 export const metadata = { title: 'Evidence · M Sciences' };
 
@@ -29,6 +31,10 @@ export default function EvidencePage() {
               padding: '12px',
             }}
           />
+          <ReadAlongside
+  slug="white-paper"
+  note="Section 11 covers how a claim matures, in full — plus the technical boundaries in Section 07."
+/>
           <div className="relative z-10">
             <p className="text-[#10262e] m-0">
               <strong>We present no performance statistics.</strong> No application-specific result
