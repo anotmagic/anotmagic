@@ -83,9 +83,6 @@ export default function Footer() {
           released only within the supporting evidence boundary. Treated water is not for drinking
           purposes. ANOT®, NOXXALL® and Sugofil® are registered marks; S Astra™ is a trademark of M
           Sciences.
-          <br />
-          <br />
-          Prototype for design approval — not a live site.
         </div>
       </div>
     </footer>
