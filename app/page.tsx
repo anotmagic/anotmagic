@@ -217,52 +217,106 @@ export default function HomePage() {
       </section>
 
       {/* IN THE FIELD (IMAGES) */}
-      <section className="py-[clamp(48px,7vw,96px)] bg-[#eef2f1]">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="border-b border-[#10262e] pb-2.5 mb-7">
-            <div className="text-[#17787a] font-mono text-[11.5px] tracking-[0.14em] uppercase mb-2.5">
-              In the field
-            </div>
-            <h2 className="font-serif font-bold text-[clamp(26px,3.2vw,34px)] leading-[1.2] mb-3.5">
-              Plants, containers and a demonstration unit
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <figure className="m-0">
-              <Image
-                src="/images/effluent-samples.jpg"
-                alt="Raw and treated effluent samples side by side against a dark ground"
-                width={900}
-                height={600}
-                className="w-full block bg-[#eef2f1]"
-              />
-              <figcaption className="text-[13px] text-[#37535e] pt-2.5 leading-[1.45]">
-                Raw and treated effluent samples. Colour and turbidity change; dissolved load is
-                not visible in a photograph.
-                <span className="block font-mono text-[9.5px] tracking-[0.09em] uppercase text-[#a8600f] mt-1.5">
-                  Caption field is mandatory — see specification §12.2
-                </span>
-              </figcaption>
-            </figure>
-            <figure className="m-0">
-              <Image
-                src="/images/outlet-sample.jpg"
-                alt="Operator drawing treated water at the outlet of a containerised unit"
-                width={900}
-                height={600}
-                className="w-full block bg-[#eef2f1]"
-              />
-              <figcaption className="text-[13px] text-[#37535e] pt-2.5 leading-[1.45]">
-                Treated water drawn at the outlet of a containerised unit, Muscat. Client details
-                on labels are obscured under confidentiality agreements.
-                <span className="block font-mono text-[9.5px] tracking-[0.09em] uppercase text-[#a8600f] mt-1.5">
-                  Caption field is mandatory — see specification §12.2
-                </span>
-              </figcaption>
-            </figure>
-          </div>
+      {/* IN THE FIELD (IMAGES) */}
+<section className="py-[clamp(48px,7vw,96px)] bg-[#eef2f1]">
+  <div className="max-w-[1200px] mx-auto px-6">
+    <div className="border-b border-[#10262e] pb-2.5 mb-7">
+      <div className="text-[#17787a] font-mono text-[11.5px] tracking-[0.14em] uppercase mb-2.5">
+        In the field
+      </div>
+      <h2 className="font-serif font-bold text-[clamp(26px,3.2vw,34px)] leading-[1.2] mb-3.5">
+        Plants, containers and a demonstration unit
+      </h2>
+    </div>
+
+    {/*
+      Every card uses the SAME frame shape (aspect-[4/3]) and object-contain,
+      regardless of the source image's own orientation. object-contain scales
+      the image to fill that shape as much as possible on whichever axis is
+      the limiting one — width for a wide image, height for a tall one — and
+      never crops. A portrait photo will letterbox left/right; a landscape
+      photo will letterbox top/bottom slightly less; neither shrinks smaller
+      than the frame allows. One consistent mat colour keeps all four
+      looking like a set instead of four different treatments.
+    */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <figure className="m-0 flex flex-col">
+        <div className="w-full aspect-[4/3] bg-white border border-[#c3d0d2] flex items-center justify-center overflow-hidden">
+          <Image
+            src="/images/effluent-samples.jpg"
+            alt="Raw and treated effluent samples side by side against a dark ground"
+            width={900}
+            height={600}
+            className="w-full h-full object-contain"
+          />
         </div>
-      </section>
+        <figcaption className="text-[13px] text-[#37535e] pt-2.5 leading-[1.45]">
+          Raw and treated effluent samples. Colour and turbidity change; dissolved load is
+          not visible in a photograph.
+          <span className="block font-mono text-[9.5px] tracking-[0.09em] uppercase text-[#a8600f] mt-1.5">
+            Caption field is mandatory — see specification §12.2
+          </span>
+        </figcaption>
+      </figure>
+
+      <figure className="m-0 flex flex-col">
+        <div className="w-full aspect-[4/3] bg-white border border-[#c3d0d2] flex items-center justify-center overflow-hidden">
+          <Image
+            src="/images/outlet-sample.jpg"
+            alt="Operator drawing treated water at the outlet of a containerised unit"
+            width={900}
+            height={600}
+            className="w-full h-full object-contain"
+          />
+        </div>
+        <figcaption className="text-[13px] text-[#37535e] pt-2.5 leading-[1.45]">
+          Treated water drawn at the outlet of a containerised unit, Muscat. Client details
+          on labels are obscured under confidentiality agreements.
+          <span className="block font-mono text-[9.5px] tracking-[0.09em] uppercase text-[#a8600f] mt-1.5">
+            Caption field is mandatory — see specification §12.2
+          </span>
+        </figcaption>
+      </figure>
+
+      <figure className="m-0 flex flex-col">
+        <div className="w-full aspect-[4/3] bg-white border border-[#c3d0d2] flex items-center justify-center overflow-hidden">
+          <Image
+            src="/images/water-comparison-hand.jpg"
+            alt="Two bottles held side by side: untreated effluent and treated, clear water"
+            width={1080}
+            height={1555}
+            className="w-full h-full object-contain"
+          />
+        </div>
+        <figcaption className="text-[13px] text-[#37535e] pt-2.5 leading-[1.45]">
+          Untreated and treated water held side by side for direct visual comparison.
+          <span className="block font-mono text-[9.5px] tracking-[0.09em] uppercase text-[#a8600f] mt-1.5">
+            Caption field is mandatory — see specification §12.2
+          </span>
+        </figcaption>
+      </figure>
+
+      <figure className="m-0 flex flex-col">
+        <div className="w-full aspect-[4/3] bg-white border border-[#c3d0d2] flex items-center justify-center overflow-hidden">
+          <Image
+            src="/images/treated-samples-grid-CROPPED-REVIEW.jpg"
+            alt="Raw and treated water samples from field trials across multiple industries, held for internal reference"
+            width={1080}
+            height={1036}
+            className="w-full h-full object-contain"
+          />
+        </div>
+        <figcaption className="text-[13px] text-[#37535e] pt-2.5 leading-[1.45]">
+          Field reference photos from historical trials across multiple industries — held under
+          client confidentiality.
+          <span className="block font-mono text-[9.5px] tracking-[0.09em] uppercase text-[#a8600f] mt-1.5">
+            Rung 1 material only — not independently verified against a pre-agreed protocol
+          </span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 
       {/* FINAL CTA */}
       <section className="py-[clamp(48px,7vw,96px)] bg-[#fbfbf9]">
