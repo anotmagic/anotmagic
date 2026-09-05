@@ -1,9 +1,15 @@
 import Link from 'next/link';
+import FooterVideo from './FooterVideo';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#10262e] text-[#a9c6c8] py-12 mt-0">
-      <div className="max-w-[1200px] mx-auto px-6">
+    <footer className="bg-[#10262e] text-[#a9c6c8] mt-0">
+      {/* Video strip — full-bleed, sits above the column grid.
+          Native aspect ratio (1920x584) is banner-shaped, so it reads as a
+          deliberate cinematic strip rather than a cropped photo/video. */}
+      <FooterVideo />
+
+      <div className="max-w-[1200px] mx-auto px-6 py-12">
         {/* Four‑column grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {/* Navigate */}
@@ -12,7 +18,7 @@ export default function Footer() {
               Navigate
             </h4>
             <ul className="list-none text-[14px] space-y-1.5">
-              <li className="py-0.5"><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+              <li className="py-0.5"><Link href="/"className="hover:text-white transition-colors">Home</Link></li>
               <li className="py-0.5"><Link href="/technology" className="hover:text-white transition-colors">Technology</Link></li>
               <li className="py-0.5"><Link href="/industries" className="hover:text-white transition-colors">Industries</Link></li>
               <li className="py-0.5"><Link href="/evidence" className="hover:text-white transition-colors">Evidence</Link></li>
@@ -30,7 +36,7 @@ export default function Footer() {
               <li className="py-0.5">ANOT®</li>
               <li className="py-0.5">NOXXALL®</li>
               <li className="py-0.5">Sugofil®</li>
-              <li className="py-0.5">S Astra™</li>
+              <li className="py-0.5">S Astra®</li>
               <li className="py-0.5">Where our process ends</li>
             </ul>
           </div>

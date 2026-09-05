@@ -49,7 +49,7 @@ export default function MapPage() {
               <li className="py-1.25 border-b border-[#c3d0d2] text-[#37535e]">ANOT®</li>
               <li className="py-1.25 border-b border-[#c3d0d2] text-[#37535e]">NOXXALL®</li>
               <li className="py-1.25 border-b border-[#c3d0d2] text-[#37535e]">Sugofil®</li>
-              <li className="py-1.25 border-b border-[#c3d0d2] text-[#37535e]">S Astra™</li>
+              <li className="py-1.25 border-b border-[#c3d0d2] text-[#37535e]">S Astra®</li>
               <li className="py-1.25 border-b border-[#c3d0d2] text-[#37535e]">Where our process ends</li>
             </ul>
           </div>
