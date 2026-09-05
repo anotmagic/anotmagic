@@ -48,8 +48,8 @@ export default function HomePage() {
           static content starts. Same aspect-ratio/mute/reduced-motion handling
           as the footer reel, via the shared VideoStrip component. */}
       <VideoStrip
-        src="/video/site-tour-reel.mp4"
-        poster="/video/site-tour-reel-poster.jpg"
+        src="/video/company-reel.mp4"
+        poster="/video/company-reel-poster.jpg"
         aspectRatio="1892/482"
         ariaLabel="M Sciences site and technology tour"
       />
