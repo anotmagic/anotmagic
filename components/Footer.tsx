@@ -78,7 +78,7 @@ export default function Footer() {
             <ul className="list-none text-[14px] space-y-1.5">
               <li className="py-0.5 font-mono text-[#2fa9a6] text-[13px]">drmadan@anotmagic.com</li>
               <li className="py-0.5 font-mono text-[#2fa9a6] text-[13px]">+91 98450 16035</li>
-              <li className="py-0.5 font-mono text-[#2fa9a6] text-[13px]">Dr Rajkumar Rd, opp. Vivekananda College, Rajajinagar, Bengaluru, Karnataka 560010</li>
+              <li className="py-0.5 font-mono text-[#2fa9a6] text-[13px]"> Phoenix Kessaku, Dr Rajkumar Rd, Opp: Orion mall, Rajajinagar, Bengaluru, Karnataka -10 Republic of Bharat</li>
             </ul>
           </div>
         </div>
