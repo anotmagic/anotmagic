@@ -53,7 +53,7 @@ export default function ContactPage() {
                 <br />
                +91 98450 16035
                 <br />
-                Dr Rajkumar Rd, opp. Vivekananda College, Rajajinagar, Bengaluru, Karnataka 560010
+                Phoenix Kessaku, Dr Rajkumar Rd, Opp: Orion mall, Rajajinagar, Bengaluru, Karnataka -10 Republic of Bharat
               </p>
               <p className="text-[13px] text-[#a9c6c8] m-0">
                 Placeholders — to be supplied by M Sciences before launch.
