@@ -5,7 +5,7 @@ export default function FooterVideo() {
     <VideoStrip
       src="/video/site-tour-reel.mp4"
       poster="/video/site-tour-reel-poster.jpg"
-      aspectRatio="1920/584"
+      aspectRatio="1892/482"
       ariaLabel="M Sciences company reel"
     />
   );
