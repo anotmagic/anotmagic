@@ -76,9 +76,9 @@ export default function Footer() {
               Contact
             </h4>
             <ul className="list-none text-[14px] space-y-1.5">
-              <li className="py-0.5 font-mono text-[#2fa9a6] text-[13px]">[ EMAIL ]</li>
-              <li className="py-0.5 font-mono text-[#2fa9a6] text-[13px]">[ PHONE ]</li>
-              <li className="py-0.5 font-mono text-[#2fa9a6] text-[13px]">[ ADDRESS ]</li>
+              <li className="py-0.5 font-mono text-[#2fa9a6] text-[13px]">drmadan@anotmagic.com</li>
+              <li className="py-0.5 font-mono text-[#2fa9a6] text-[13px]">+91 98450 16035</li>
+              <li className="py-0.5 font-mono text-[#2fa9a6] text-[13px]">Dr Rajkumar Rd, opp. Vivekananda College, Rajajinagar, Bengaluru, Karnataka 560010</li>
             </ul>
           </div>
         </div>

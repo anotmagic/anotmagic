@@ -49,11 +49,11 @@ export default function ContactPage() {
                 Contact
               </div>
               <p className="font-mono text-[#2fa9a6] text-[13px]">
-                [ EMAIL ]
+               drmadan@anotmagic.com
                 <br />
-                [ PHONE ]
+               +91 98450 16035
                 <br />
-                [ ADDRESS ]
+                Dr Rajkumar Rd, opp. Vivekananda College, Rajajinagar, Bengaluru, Karnataka 560010
               </p>
               <p className="text-[13px] text-[#a9c6c8] m-0">
                 Placeholders — to be supplied by M Sciences before launch.
