@@ -10,6 +10,7 @@ const LINKS = [
   { href: '/industries', label: 'Industries' },
   { href: '/evidence', label: 'Evidence' },
   { href: '/resources', label: 'Resources' },
+  { href: '/catalogs', label: 'Catalogs' },
   { href: '/tool', label: 'Is this for you?' },
   { href: '/map', label: 'Nav map' },
 ];
@@ -47,7 +48,7 @@ export default function Nav() {
               flex flex-col items-stretch gap-0 p-[88px_28px_28px] 
               transform transition-transform duration-250 ease 
               ${open ? 'translate-x-0' : 'translate-x-full'}
-              md:static md:translate-x-0 md:flex-row md:items-center md:gap-5 
+              md:static md:translate-x-0 md:flex-row md:items-center md:gap-4 
               md:p-0 md:bg-transparent md:h-auto md:w-auto md:shadow-none
               md:ml-auto   /* <--- this pushes the nav to the right */
               z-41 shadow-[-8px_0_24px_rgba(16,38,46,0.12)] overflow-y-auto
@@ -60,7 +61,7 @@ export default function Nav() {
                 href={l.href}
                 aria-current={pathname === l.href ? 'page' : undefined}
                 className={`
-                  text-[17px] md:text-[14px] py-3.5 md:py-1.5 
+                  text-[17px] md:text-[13.5px] py-3.5 md:py-1.5 
                   border-b border-[#c3d0d2] md:border-b-2 md:border-transparent
                   text-[#37535e] hover:text-[#17787a] no-underline
                   ${pathname === l.href ? 'text-[#10262e] md:border-b-[#17787a] relative md:static' : ''}
