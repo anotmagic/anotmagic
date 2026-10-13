@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
 
 function escapeHtml(value: string) {
   return value
@@ -56,6 +57,10 @@ export async function POST(request: Request) {
         { status: 500 },
       );
     }
+
+    // Instantiate the client here — AFTER the env var check — so the
+    // module can be imported at build time without side effects.
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     const internalEmail =
       process.env.WHITE_PAPER_REQUEST_TO || process.env.CONTACT_EMAIL;
