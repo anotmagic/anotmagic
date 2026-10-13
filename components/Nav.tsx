@@ -1,18 +1,17 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const LINKS = [
-  { href: '/', label: 'Home' },
-  { href: '/technology', label: 'Technology' },
-  { href: '/industries', label: 'Industries' },
-  { href: '/evidence', label: 'Evidence' },
-  { href: '/resources', label: 'Resources' },
-  { href: '/catalogs', label: 'Catalogs' },
-  { href: '/tool', label: 'Is this for you?' },
-  { href: '/map', label: 'Nav map' },
+  { href: "/", label: "Home" },
+  { href: "/technology", label: "Technology" },
+  { href: "/industries", label: "Industries" },
+  { href: "/evidence", label: "Evidence" },
+  { href: "/resources", label: "Resources" },
+  { href: "/tool", label: "Is this for you?" },
+  { href: "/map", label: "Nav map" },
 ];
 
 export default function Nav() {
@@ -26,9 +25,9 @@ export default function Nav() {
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
-    document.body.style.overflow = open ? 'hidden' : '';
+    document.body.style.overflow = open ? "hidden" : "";
     return () => {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     };
   }, [open]);
 
@@ -37,7 +36,10 @@ export default function Nav() {
       <header className="sticky top-0 z-50 bg-[#fbfbf9]/94 backdrop-blur-[8px] border-b border-[#c3d0d2]">
         <div className="max-w-[1200px] mx-auto px-6 flex items-center gap-7 py-3.5 relative">
           {/* Logo – stays left */}
-          <Link className="font-serif font-bold text-[20px] tracking-[-0.01em] text-[#10262e] no-underline z-10" href="/">
+          <Link
+            className="font-serif font-bold text-[20px] tracking-[-0.01em] text-[#10262e] no-underline z-10"
+            href="/"
+          >
             M <span className="text-[#17787a]">Sciences</span>
           </Link>
 
@@ -47,7 +49,7 @@ export default function Nav() {
               fixed top-0 right-0 h-full w-[min(320px,84vw)] bg-[#fbfbf9] 
               flex flex-col items-stretch gap-0 p-[88px_28px_28px] 
               transform transition-transform duration-250 ease 
-              ${open ? 'translate-x-0' : 'translate-x-full'}
+              ${open ? "translate-x-0" : "translate-x-full"}
               md:static md:translate-x-0 md:flex-row md:items-center md:gap-4 
               md:p-0 md:bg-transparent md:h-auto md:w-auto md:shadow-none
               md:ml-auto   /* <--- this pushes the nav to the right */
@@ -59,13 +61,13 @@ export default function Nav() {
               <Link
                 key={l.href}
                 href={l.href}
-                aria-current={pathname === l.href ? 'page' : undefined}
+                aria-current={pathname === l.href ? "page" : undefined}
                 className={`
                   text-[17px] md:text-[13.5px] py-3.5 md:py-1.5 
                   border-b border-[#c3d0d2] md:border-b-2 md:border-transparent
                   text-[#37535e] hover:text-[#17787a] no-underline
-                  ${pathname === l.href ? 'text-[#10262e] md:border-b-[#17787a] relative md:static' : ''}
-                  ${pathname === l.href ? 'before:content-[""] before:absolute before:left-[-28px] before:top-0 before:bottom-0 before:w-[3px] before:bg-[#17787a] md:before:hidden' : ''}
+                  ${pathname === l.href ? "text-[#10262e] md:border-b-[#17787a] relative md:static" : ""}
+                  ${pathname === l.href ? 'before:content-[""] before:absolute before:left-[-28px] before:top-0 before:bottom-0 before:w-[3px] before:bg-[#17787a] md:before:hidden' : ""}
                 `}
                 onClick={() => setOpen(false)}
               >
@@ -96,7 +98,7 @@ export default function Nav() {
               md:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 p-0 border-0 bg-transparent cursor-pointer z-10
               transition-transform duration-200
             `}
-            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             aria-controls="main-nav"
             onClick={() => setOpen((o) => !o)}
@@ -104,19 +106,19 @@ export default function Nav() {
             <span
               className={`
                 block w-[22px] h-[2px] bg-[#10262e] transition-transform duration-200 ease
-                ${open ? 'translate-y-[7px] rotate-45' : ''}
+                ${open ? "translate-y-[7px] rotate-45" : ""}
               `}
             />
             <span
               className={`
                 block w-[22px] h-[2px] bg-[#10262e] transition-opacity duration-200 ease
-                ${open ? 'opacity-0' : ''}
+                ${open ? "opacity-0" : ""}
               `}
             />
             <span
               className={`
                 block w-[22px] h-[2px] bg-[#10262e] transition-transform duration-200 ease
-                ${open ? '-translate-y-[7px] -rotate-45' : ''}
+                ${open ? "-translate-y-[7px] -rotate-45" : ""}
               `}
             />
           </button>
