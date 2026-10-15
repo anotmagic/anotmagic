@@ -1,7 +1,7 @@
-import ContactForm from '../../components/ContactForm';
-import ReadAlongside from '../../components/ReadAlongside';
+import ContactForm from "../../components/ContactForm";
+import ReadAlongside from "../../components/ReadAlongside";
 
-export const metadata = { title: 'Start a conversation · M Sciences' };
+export const metadata = { title: "Start a conversation · M Sciences" };
 
 export default function ContactPage() {
   return (
@@ -16,8 +16,9 @@ export default function ContactPage() {
           water problem.
         </h1>
         <p className="font-serif text-[20px] leading-[1.5] text-[#37535e] mt-3.5 max-w-[60ch]">
-          The most useful first conversation is about your site, not our product. The more of this
-          you can tell us, the more useful our first answer will be.
+          The most useful first conversation is about your site, not our
+          product. The more of this you can tell us, the more useful our first
+          answer will be.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-[34px] items-start">
           {/* Left column – form */}
@@ -32,9 +33,9 @@ export default function ContactPage() {
                 Bring to the first conversation
               </div>
               <p className="text-[15px] text-[#37535e] m-0">
-                Treatment-train diagram · representative water-quality data including the bad days
-                · flow and variability · current operating-cost baseline · target discharge or
-                reuse endpoint
+                Treatment-train diagram · representative water-quality data
+                including the bad days · flow and variability · current
+                operating-cost baseline · target discharge or reuse endpoint
               </p>
             </div>
 
@@ -49,11 +50,12 @@ export default function ContactPage() {
                 Contact
               </div>
               <p className="font-mono text-[#2fa9a6] text-[13px]">
-               drmadan@anotmagic.com
+                askus@anotmagic.com
                 <br />
-               +91 98450 16035
+                +91-98450-16035
                 <br />
-                Phoenix Kessaku, Dr Rajkumar Rd, Opp: Orion mall, Rajajinagar, Bengaluru, Karnataka -10 Republic of Bharat
+                Zefa, 29th Floor, Phoenix Kessaku, 1 Dr. Rajkumar Road,
+                Rajajinagar, Bengaluru 560010
               </p>
               <p className="text-[13px] text-[#a9c6c8] m-0">
                 Placeholders — to be supplied by M Sciences before launch.

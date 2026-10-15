@@ -1,3 +1,4 @@
+//components/Nav.tsx
 "use client";
 
 import Link from "next/link";
@@ -8,10 +9,11 @@ const LINKS = [
   { href: "/", label: "Home" },
   { href: "/technology", label: "Technology" },
   { href: "/industries", label: "Industries" },
+  { href: "/the-water-problem", label: "The Water Problem" },
   { href: "/evidence", label: "Evidence" },
+  { href: "/blog", label: "Insights" },
   { href: "/resources", label: "Resources" },
   { href: "/tool", label: "Is this for you?" },
-  { href: "/map", label: "Nav map" },
 ];
 
 export default function Nav() {

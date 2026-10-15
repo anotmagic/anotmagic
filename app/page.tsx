@@ -50,12 +50,12 @@ export default function HomePage() {
       </section>
 
       {/* SITE TOUR VIDEO */}
-      <VideoStrip
+      {/* <VideoStrip
         src="/video/company-reel.mp4"
         poster="/video/company-reel-poster.jpg"
         aspectRatio="1892/482"
         ariaLabel="M Sciences site and technology tour"
-      />
+      /> */}
 
       {/* PROBLEM SECTION */}
       <section className="py-[clamp(48px,7vw,96px)] bg-[#fbfbf9]">
