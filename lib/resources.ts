@@ -70,35 +70,30 @@ export const RESOURCES: ResourceDoc[] = [
   {
     slug: "M-Sciences-White-Paper",
     title: "Rethinking Industrial Water Performance",
-    kind: "White paper",
+    kind: "Rethinking Industrial Water Performance",
     pages: 16,
     updated: "September 2026",
     description:
       "The full technical and economic case, section by section: complete-system economics, technical boundaries, the evidence ladder and a decision-grade pilot checklist.",
     audience:
       "For anyone weighing a treatment decision, and for the different people who will weigh it: operations, engineering, EHS, sustainability, finance and procurement.",
-    access: "gated",
+    access: "open",
 
-    /*
-     * IMPORTANT:
-     * Do not add a public `file` here.
-     * The full white paper is delivered only after the approved request process.
-     */
+    file: "/docs/M-Sciences-Rethinking-Industrial-Water-Performance.pdf",
     summary: [
-      "Water has moved from a utility line item to a constraint on production, expansion and licence to operate. The change is not that treatment became harder. It is that the cost of treating badly became visible.",
-
-      "This paper argues that the constraint at most sites is not a single contaminant, and not a shortage of treatment capacity. It is the economic and operating consequence of the whole treatment train, so the correct first move is to establish what the existing system actually costs to run, before evaluating any technology at all.",
-
-      "This paper contains no M Sciences performance statistics.",
+      "Reading this paper will help you understand why the constraint at most sites is not a single contaminant, and not a shortage of treatment capacity. It is the economic and operating consequence of the whole treatment train, so the correct first move is to establish what the existing system actually costs to run, before evaluating any technology at all.",
     ],
 
-    readAlongside: ["executive-brief", "portfolio-capability-profile"],
+    readAlongside: [
+      "Rethinking Industrial Water Performance",
+      "portfolio-capability-profile",
+    ],
   },
 
   {
     slug: "M-Sciences - Executive Presentation",
     title: "Executive Presentation: Industrial Water Performance",
-    kind: "White paper",
+    kind: "Executive Presentation: Industrial Water Performance",
     pages: 16,
     updated: "September 2026",
     description:
@@ -113,11 +108,7 @@ export const RESOURCES: ResourceDoc[] = [
      * The full white paper is delivered only after the approved request process.
      */
     summary: [
-      "Water has moved from a utility line item to a constraint on production, expansion and licence to operate. The change is not that treatment became harder. It is that the cost of treating badly became visible.",
-
-      "This paper argues that the constraint at most sites is not a single contaminant, and not a shortage of treatment capacity. It is the economic and operating consequence of the whole treatment train, so the correct first move is to establish what the existing system actually costs to run, before evaluating any technology at all.",
-
-      "This paper contains no M Sciences performance statistics.",
+      "      Reading this paper will help you understand why the constraint at most sites is not a single contaminant, and not a shortage of treatment capacity. It is the economic and operating consequence of the whole treatment train, so the correct first move is to establish what the existing system actually costs to run, before evaluating any technology at all.",
     ],
 
     readAlongside: ["executive-brief", "portfolio-capability-profile"],

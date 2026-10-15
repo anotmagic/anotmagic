@@ -69,9 +69,15 @@ const QUESTIONS = [
 ];
 
 const READ_ALONGSIDE = [
-  { href: "/executive-brief", label: "Executive Brief" },
-  { href: "/portfolio", label: "Portfolio & Capabilities" },
-  { href: "/white-paper", label: "The white paper" },
+  { href: "/resources/M-Sciences-Executive-Brief", label: "Executive Brief" },
+  {
+    href: "/resources/M-Sciences-Portfolio-and-Capabilities",
+    label: "Portfolio & Capabilities",
+  },
+  {
+    href: "/resources/M-Sciences-Rethinking-Industrial-Water-Performance",
+    label: "The white paper",
+  },
 ];
 
 export default function WaterProblemPage() {
