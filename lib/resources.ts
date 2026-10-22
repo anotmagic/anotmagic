@@ -102,11 +102,6 @@ export const RESOURCES: ResourceDoc[] = [
       "For anyone weighing a treatment decision, and for the different people who will weigh it: operations, engineering, EHS, sustainability, finance and procurement.",
     access: "gated",
 
-    /*
-     * IMPORTANT:
-     * Do not add a public `file` here.
-     * The full white paper is delivered only after the approved request process.
-     */
     summary: [
       "      Reading this paper will help you understand why the constraint at most sites is not a single contaminant, and not a shortage of treatment capacity. It is the economic and operating consequence of the whole treatment train, so the correct first move is to establish what the existing system actually costs to run, before evaluating any technology at all.",
     ],

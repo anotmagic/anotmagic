@@ -276,9 +276,9 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <figure className="m-0 flex flex-col">
-              <div className="w-full aspect-[4/3] bg-white border border-[#c3d0d2] flex items-center justify-center overflow-hidden">
+              <div className="w-full aspect-[2/3] bg-white border border-[#c3d0d2] flex items-center justify-center overflow-hidden">
                 <Image
                   src="/images/effluent-samples.jpg"
                   alt="Raw and treated effluent samples side by side against a dark ground"
@@ -295,7 +295,7 @@ export default function HomePage() {
             </figure>
 
             <figure className="m-0 flex flex-col">
-              <div className="w-full aspect-[4/3] bg-white border border-[#c3d0d2] flex items-center justify-center overflow-hidden">
+              <div className="w-full aspect-[2/3] bg-white border border-[#c3d0d2] flex items-center justify-center overflow-hidden">
                 <Image
                   src="/images/outlet-sample.jpg"
                   alt="Operator drawing treated water at the outlet of a containerised unit"
@@ -313,7 +313,7 @@ export default function HomePage() {
             </figure>
 
             <figure className="m-0 flex flex-col">
-              <div className="w-full aspect-[4/3] bg-white border border-[#c3d0d2] flex items-center justify-center overflow-hidden">
+              <div className="w-full aspect-[2/3] bg-white border border-[#c3d0d2] flex items-center justify-center overflow-hidden">
                 <Image
                   src="/images/water-comparison-hand.jpg"
                   alt="Two bottles held side by side: untreated effluent and treated, clear water"
@@ -326,23 +326,6 @@ export default function HomePage() {
               <figcaption className="text-[13px] text-[#37535e] pt-2.5 leading-[1.45]">
                 Untreated and treated water held side by side for direct visual
                 comparison.
-              </figcaption>
-            </figure>
-
-            <figure className="m-0 flex flex-col">
-              <div className="w-full aspect-[4/3] bg-white border border-[#c3d0d2] flex items-center justify-center overflow-hidden">
-                <Image
-                  src="/images/treated-samples-grid-CROPPED-REVIEW.jpg"
-                  alt="Raw and treated water samples from field trials across multiple industries, held for internal reference"
-                  width={1080}
-                  height={1036}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-
-              <figcaption className="text-[13px] text-[#37535e] pt-2.5 leading-[1.45]">
-                Field reference photos from historical trials across multiple
-                industries — held under client confidentiality.
               </figcaption>
             </figure>
           </div>

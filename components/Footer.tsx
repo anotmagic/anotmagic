@@ -75,7 +75,7 @@ export default function Footer() {
               <li className="py-0.5">ANOT®</li>
               <li className="py-0.5">NOXXALL®</li>
               <li className="py-0.5">Sugofil®</li>
-              <li className="py-0.5">S Astra®</li>
+              <li className="py-0.5"> S Astra™</li>
               <li className="py-0.5">Where our process ends</li>
             </ul>
           </div>
