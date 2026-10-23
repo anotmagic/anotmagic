@@ -220,49 +220,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* BOUNDARY */}
-      <section className="py-[clamp(48px,7vw,96px)] bg-[#fbfbf9]">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="text-[#a8600f] font-mono text-[11.5px] tracking-[0.14em] uppercase mb-2.5">
-            The single boundary that matters most
-          </div>
-
-          <div className="relative bg-[#f7efe2] border border-[#a8600f] border-l-4 border-l-[#a8600f] p-[26px_28px] my-[26px]">
-            <div
-              className="absolute inset-0 pointer-events-none"
-              style={{
-                background:
-                  "repeating-linear-gradient(45deg, rgba(168,96,15,0.16) 0px 1px, transparent 1px 8px)",
-                mask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
-                WebkitMaskComposite: "xor",
-                maskComposite: "exclude",
-                padding: "12px",
-              }}
-            />
-
-            <div className="relative z-10">
-              <p className="text-[19px] font-serif leading-[1.45] text-[#10262e] mb-2">
-                Advanced oxidation degrades susceptible compounds. It does not
-                remove dissolved salts, TDS or most dissolved metals.
-              </p>
-
-              <p className="text-[#10262e] mb-2">
-                Where those are your binding constraint, membrane, evaporative,
-                precipitation or ion-exchange processes remain necessary. We
-                position alongside them — not instead of them.
-              </p>
-
-              <p className="text-[14px] text-[#37535e] mb-0">
-                Our process ends at micron filtration. Ultrafiltration and
-                reverse osmosis are separate technologies with their own
-                expertise requirements, integrated downstream. Treated water is
-                not for drinking purposes.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* IN THE FIELD */}
       <section className="py-[clamp(48px,7vw,96px)] bg-[#eef2f1]">
         <div className="max-w-[1200px] mx-auto px-6">
@@ -328,6 +285,49 @@ export default function HomePage() {
                 comparison.
               </figcaption>
             </figure>
+          </div>
+        </div>
+      </section>
+
+      {/* BOUNDARY */}
+      <section className="py-[clamp(48px,7vw,96px)] bg-[#fbfbf9]">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="text-[#a8600f] font-mono text-[11.5px] tracking-[0.14em] uppercase mb-2.5">
+            The single boundary that matters most
+          </div>
+
+          <div className="relative bg-[#f7efe2] border border-[#a8600f] border-l-4 border-l-[#a8600f] p-[26px_28px] my-[26px]">
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  "repeating-linear-gradient(45deg, rgba(168,96,15,0.16) 0px 1px, transparent 1px 8px)",
+                mask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
+                WebkitMaskComposite: "xor",
+                maskComposite: "exclude",
+                padding: "12px",
+              }}
+            />
+
+            <div className="relative z-10">
+              <p className="text-[19px] font-serif leading-[1.45] text-[#10262e] mb-2">
+                Advanced oxidation degrades susceptible compounds. It does not
+                remove dissolved salts, TDS or most dissolved metals.
+              </p>
+
+              <p className="text-[#10262e] mb-2">
+                Where those are your binding constraint, membrane, evaporative,
+                precipitation or ion-exchange processes remain necessary. We
+                position alongside them — not instead of them.
+              </p>
+
+              <p className="text-[14px] text-[#37535e] mb-0">
+                Our process ends at micron filtration. Ultrafiltration and
+                reverse osmosis are separate technologies with their own
+                expertise requirements, integrated downstream. Treated water is
+                not for drinking purposes.
+              </p>
+            </div>
           </div>
         </div>
       </section>

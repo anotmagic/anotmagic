@@ -57,9 +57,6 @@ export default function ContactPage() {
                 Zefa, 29th Floor, Phoenix Kessaku, 1 Dr. Rajkumar Road,
                 Rajajinagar, Bengaluru 560010
               </p>
-              <p className="text-[13px] text-[#a9c6c8] m-0">
-                Placeholders — to be supplied by M Sciences before launch.
-              </p>
             </div>
           </div>
         </div>
