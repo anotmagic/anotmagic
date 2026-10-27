@@ -6,6 +6,7 @@ import Blog, { BlogDTO } from "../models/Blog";
 import { serialize } from "@/lib/blogs";
 import AdminActions from "@/components/AdminActions";
 import LogoutButton from "@/components/LogoutButton";
+import RichContent from "@/components/RichContent";
 
 export const dynamic = "force-dynamic";
 export const metadata = { robots: { index: false, follow: false } };
@@ -88,9 +89,9 @@ export default async function AdminDashboard({
               <summary className="cursor-pointer text-sm text-[#17787a]">
                 Preview content
               </summary>
-              <p className="whitespace-pre-wrap text-sm text-[#37535e] mt-2">
-                {b.content}
-              </p>
+              <div className="mt-3 border-t border-[#c3d0d2] pt-3">
+                <RichContent html={b.content} />
+              </div>
             </details>
             {b.status === "approved" && (
               <Link

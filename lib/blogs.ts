@@ -1,5 +1,6 @@
 import Blog, { BlogDTO, BlogStatus } from "../app/models/Blog";
 import { connectDB } from "./mongodb";
+import { cleanHtml, textOf } from "./sanitize";
 
 export function slugify(s: string) {
   return s
@@ -23,10 +24,10 @@ export type BlogInput = {
   authorEmail?: string;
 };
 
-export function validate(b: BlogInput) {
+export function validate(b: BlogInput, isAdmin: boolean) {
   const title = (b.title ?? "").trim();
   const description = (b.description ?? "").trim();
-  const content = (b.content ?? "").trim();
+  const content = cleanHtml(String(b.content ?? ""), isAdmin);
   const authorName = (b.authorName ?? "").trim();
   const authorEmail = (b.authorEmail ?? "").trim();
   const image = (b.image ?? "").trim();
@@ -41,13 +42,14 @@ export function validate(b: BlogInput) {
     return { error: "Title must be 5–120 characters." };
   if (description.length < 20 || description.length > 200)
     return { error: "Description must be 20–200 characters." };
-  if (content.length < 200)
-    return { error: "Content must be at least 200 characters." };
+  if (textOf(content).length < 200)
+    return { error: "Content must be at least 200 characters of text." };
+  if (content.length > 200_000) return { error: "Content is too long." };
   if (!authorName) return { error: "Author name is required." };
   if (!/^\S+@\S+\.\S+$/.test(authorEmail))
     return { error: "A valid author email is required." };
-  if (image && !/^https:\/\//.test(image))
-    return { error: "Image must be an https:// URL." };
+  if (image && !/^(https:\/\/|\/api\/images\/[a-f0-9]{24}$)/.test(image))
+    return { error: "Cover image must be an https:// URL." };
 
   return {
     data: {
@@ -63,7 +65,7 @@ export function validate(b: BlogInput) {
 }
 
 export async function createBlog(input: BlogInput, opts: { isAdmin: boolean }) {
-  const v = validate(input);
+  const v = validate(input, opts.isAdmin);
   if (v.error) return { error: v.error };
   await connectDB();
 

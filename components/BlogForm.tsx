@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import RichEditor from "./RichEditor";
 
 const input =
   "w-full border border-[#c3d0d2] bg-white px-3 py-2.5 text-[15px] text-[#10262e] focus:outline-none focus:border-[#17787a]";
@@ -11,12 +12,14 @@ export default function BlogForm({ endpoint, admin = false }: { endpoint: string
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [done, setDone] = useState(false);
+  const [content, setContent] = useState("");
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (!content) return setError("Write something in the editor first.");
     setBusy(true);
     setError("");
-    const body = Object.fromEntries(new FormData(e.currentTarget));
+    const body = { ...Object.fromEntries(new FormData(e.currentTarget)), content };
     const res = await fetch(endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -58,17 +61,18 @@ export default function BlogForm({ endpoint, admin = false }: { endpoint: string
         <textarea name="description" required maxLength={200} rows={2} className={input} />
       </label>
       <label className="block text-sm text-[#37535e]">
-        Cover image URL (https://…)
-        <input name="image" type="url" placeholder="https://" className={input} />
+        Cover image URL (https://… or an uploaded /api/images/… link)
+        <input name="image" placeholder="https://" className={input} />
       </label>
       <label className="block text-sm text-[#37535e]">
         Keywords (comma separated)
         <input name="keywords" placeholder="water, treatment, industry" className={input} />
       </label>
-      <label className="block text-sm text-[#37535e]">
-        Content (blank line = new paragraph, min 200 chars)
-        <textarea name="content" required rows={14} className={input} />
-      </label>
+
+      <div className="text-sm text-[#37535e]">
+        <span className="block mb-1">Content (min 200 characters)</span>
+        <RichEditor onChange={setContent} />
+      </div>
 
       {/* Honeypot – hidden from humans, bots fill it */}
       <input name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />

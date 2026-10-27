@@ -7,7 +7,7 @@ export interface BlogDTO {
   title: string;
   slug: string;
   description: string;
-  content: string;
+  content: string; // sanitized HTML
   image: string;
   keywords: string[];
   authorName: string;
@@ -29,15 +29,10 @@ const BlogSchema = new Schema(
     authorName: { type: String, required: true, trim: true, maxlength: 80 },
     authorEmail: { type: String, required: true, trim: true, lowercase: true },
     isAdminPost: { type: Boolean, default: false },
-    status: {
-      type: String,
-      enum: ["pending", "approved", "rejected"],
-      default: "pending",
-      index: true,
-    },
+    status: { type: String, enum: ["pending", "approved", "rejected"], default: "pending", index: true },
   },
-  { timestamps: true },
+  { timestamps: true }
 );
 
-export default (models.Blog ||
-  model("Blog", BlogSchema)) as mongoose.Model<any>;
+// Cast the WHOLE expression – this removes the union-type "not callable" error
+export default (models.Blog || model("Blog", BlogSchema)) as mongoose.Model<any>;

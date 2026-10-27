@@ -4,6 +4,7 @@ import { cache } from "react";
 import { connectDB } from "@/lib/mongodb";
 import Blog from "../../models/Blog";
 import { serialize } from "@/lib/blogs";
+import RichContent from "../../../components/RichContent";
 
 export const revalidate = 60;
 
@@ -80,13 +81,8 @@ export default async function BlogPost({ params }: Props) {
           className="w-full mt-8 object-cover max-h-[420px]"
         />
       )}
-      {/* Plain-text rendering on purpose: no raw HTML from strangers → no XSS */}
-      <div className="mt-8 space-y-5 text-[17px] leading-relaxed text-[#10262e]">
-        {blog.content.split(/\n\s*\n/).map((p, i) => (
-          <p key={i} className="whitespace-pre-line">
-            {p}
-          </p>
-        ))}
+      <div className="mt-8">
+        <RichContent html={blog.content} />
       </div>
       {blog.keywords.length > 0 && (
         <div className="mt-10 flex gap-2 flex-wrap">
