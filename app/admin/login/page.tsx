@@ -15,8 +15,13 @@ export default function AdminLogin() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ password }),
     });
-    if (res.ok) router.push("/admin");
-    else setError("Wrong password");
+    if (res.ok) {
+      router.push("/admin");
+      router.refresh();
+    } else {
+      const data = await res.json().catch(() => ({}));
+      setError(data.error ?? "Login failed");
+    }
   }
 
   return (
@@ -31,7 +36,9 @@ export default function AdminLogin() {
           className="w-full border border-[#c3d0d2] px-3 py-2.5"
         />
         {error && <p className="text-red-700 text-sm">{error}</p>}
-        <button className="w-full bg-[#10262e] text-white py-3 hover:bg-[#17787a] transition-colors">Sign in</button>
+        <button className="w-full bg-[#10262e] text-white py-3 hover:bg-[#17787a] transition-colors">
+          Sign in
+        </button>
       </form>
     </main>
   );
